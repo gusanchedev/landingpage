@@ -1,0 +1,10 @@
+.nav-menu {
+  display: flex;
+  flex-wrap: nowrap;
+}
+.nav-menu li {
+  margin-right: 1rem;
+}
+.projects-container {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}

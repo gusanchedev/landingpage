@@ -1,0 +1,14 @@
+{% extends "layout.njk" %}
+{% block content %}
+
+<h3> Thanks for your contact {{ name }}!</h3>
+<br>
+<p>I will send you an email to <i><strong>{{ email }}</strong></i> as soon as possible regarding your message:</p><br>
+<p><i>{{ message }}</i></p>
+<p>Sent on {{ date_of_message }}</p>
+<br>
+Regards,<br>
+<br>
+Gustavo Sanchez<br>
+Fullstack Developer
+{% endblock %}
