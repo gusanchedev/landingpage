@@ -1,4 +1,5 @@
 const Contact = require("../models/contact");
+const sendMailToContact = require("../services/sendgrid");
 
 exports.contact_create = async function (req, res, next) {
   const contact = new Contact({
@@ -9,6 +10,7 @@ exports.contact_create = async function (req, res, next) {
   });
   try {
     const newContact = await contact.save();
+    sendMailToContact(newContact);
     res.render("contact.njk", newContact);
   } catch (error) {
     next(error);
